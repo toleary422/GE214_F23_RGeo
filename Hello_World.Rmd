@@ -1,5 +1,5 @@
 ---
-title: "Hello World"
+title: "TimMap"
 output: html_notebook
 ---
 
@@ -22,6 +22,9 @@ The preview shows you a rendered HTML copy of the contents of the editor. Conseq
 - use rmarkdown to create the section header 
 - use rmarkdown to make a link that indicates where we got the data: https://gisdata.worcesterma.gov/
 - use plain text to write that this section will show us where Worcester precincts and voting locations are.
+
+# Election Data
+This project uses data from [City of Worcester Open GIS](https://gisdata.worcesterma.gov/)
 
 ```{r}
 library(sf) #here we tell R that we need the Simple Features library (sf)
@@ -46,17 +49,28 @@ tm_shape(precs) +
 
 #what about some labels?
 tm_shape(precs) + 
-  tm_fill() +
-  tm_borders() +  
-  tm_text()
+  tm_fill(col="beige") +
+  tm_borders(col="darkgreen") +  
+  tm_text("Ward_Precinct", size="AREA", col="steelblue")
 
 #that didn't work? how do we learn more about our tm_* (tmap) functions?
 ?tmap
 
 #R will let you make a map object and reuse it
-woo_map1 = tm_shape(precs)+tm_fill()+tm_borders()
+woo_map1 = tm_shape(precs) + 
+  tm_fill(col="beige") +
+  tm_borders(col="darkgreen") +  
+  tm_text("Ward_Precinct", size="AREA", col="steelblue")
 
+woo_map1
 ```
 
 # Polling Stations 
 Your task is to make a new section that imports the voting polling stations and places them on a map.
+
+```{r}
+polls = read_sf("data/Polling_Locations.geojson")
+woo_map2 = tm_shape(polls) + tm_symbols()
+woo_map1 + woo_map2
+```
+
