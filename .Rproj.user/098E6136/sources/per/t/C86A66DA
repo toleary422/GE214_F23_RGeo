@@ -1,0 +1,28 @@
+{
+    "id": "C86A66DA",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1701139729364.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "id": "05dfd838a4f442c09db05d19964833fa",
+        "name": "woo_map1",
+        "title": "woo_map1",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1701139363,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1701139729364,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,27 @@
+{
+    "id": "ED8B88BB",
+    "path": "~/GitHub/GE214_F23_RGeo/Hello_World.Rmd",
+    "project_path": "Hello_World.Rmd",
+    "type": "r_markdown",
+    "hash": "1379172902",
+    "contents": "",
+    "dirty": false,
+    "created": 1701139364878.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "108,26",
+        "scrollLine": "94"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1701141034,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1701141034805,
+    "read_only": false,
+    "read_only_alternatives": []
+}

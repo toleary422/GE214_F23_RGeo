@@ -1,0 +1,34 @@
+"0","```r
+library(sf) #here we tell R that we need the Simple Features library (sf)
+library(tmap)    # for static and interactive maps
+library(leaflet) # for interactive maps
+library(ggplot2) # tidyverse data visualization package
+
+#then we create an object called \"precs,\" which is short for precincts and fill it with the data from our geojson file
+precs = read_sf(\"data/Voting_Precincts_Based_on_2020_Census_Data.geojson\")
+
+#the \"head\" function tells us what is in the object and what kind of object it is
+head(precs)
+
+#let's plot our object
+tm_shape(precs) + 
+  tm_fill()
+
+#now let's try it with some borders
+tm_shape(precs) + 
+  tm_fill() +
+  tm_borders()
+
+#what about some labels?
+tm_shape(precs) + 
+  tm_fill() +
+  tm_borders() +  
+  tm_text()
+
+#that didn't work? how do we learn more about our tm_* (tmap) functions?
+?tmap
+
+#R will let you make a map object and reuse it
+woo_map1 = tm_shape(precs)+tm_fill()+tm_borders()
+
+```"
